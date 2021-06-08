@@ -1,14 +1,16 @@
 import * as React from "react";
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import About from "../pages/About";
+import ClientDetail from "../pages/ClientDetail";
 import Home, {Banner} from "../pages/Home";
 import YouDidIt from "../pages/YouDidIt";
 
 
 
+
 const App = () => {
   return (
-    <Router> 
+    <Router>
       <div>
       <Link to="/"> Home </Link>
 
@@ -30,6 +32,10 @@ const App = () => {
 
        <Route path="/youdidit" exact>
          <YouDidIt/>
+       </Route>
+
+       <Route path="/client/:id" exact>
+         <ClientDetail/>
        </Route>
      </Switch>
     </Router>
