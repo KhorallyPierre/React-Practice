@@ -8,8 +8,16 @@
 
 ## so far, I've learned:
 
+
+6/4
 - a few important dependencies needed in package.json to run a react application
 - why the bootstrap file is an important component of react projects
 - work through how to build out full routing system in react applicaton (through  building react router)
 - installed react-router and react-router-dom
 - Created home-page route and /about route.
+
+6/5 - 6/8
+- I'm learning about how to build more dynamic routes (dynamic: the url includes a key and we want access to that key value)
+- I created an array of objects, learned howv how to use map in react to iterate over large amounts of data
+- map returned jsx code (our divs)
+- used map on a nested collection
