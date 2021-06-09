@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
-import SlidingPane from "react-sliding-pane";
-import "react-sliding-pane/dist/react-sliding-pane.css";
+import UpdateFormPane from "../components/updates/UpdateFormPane"
 
 const data = [
     {date: "2021-06-08", 
@@ -38,29 +37,18 @@ const ClientDetail = () => {
     </div>
     </div>
     ));
-    const formPane = (
-        <SlidingPane
-        className="some-custom-class"
-        overlayClassName="some-custom-overlay-class"
-        isOpen={isPaneOpen}
-        title="Hey, it is optional pane title.  I can be React component too."
-        subtitle="Optional subtitle."
-        onRequestClose={() => {
-          // triggered on "<" on left top click or on outside click
-          setIsPaneOpen(!isPaneOpen);
-        }}
-      >
-        <div>Slide in the DMs like this! ;)</div>
-        <br />
+    
        
-      </SlidingPane>
-
-    );
-    return <div>
-        {formPane}
+    return ( 
+    <div> 
+     <UpdateFormPane 
+     isOpen={isPaneOpen}
+     handleClose={() => setIsPaneOpen(false)}
+     />
     <a onClick={() => setIsPaneOpen(true)}> New Update </a>
      {updateRenderer}
-    </div>;
+    </div> );
+
 };
 
 export default ClientDetail;

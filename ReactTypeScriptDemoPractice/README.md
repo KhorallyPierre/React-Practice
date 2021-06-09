@@ -25,3 +25,12 @@
 - the state is a varialble and react lets us change its value
 - jsx gives as an onClick prop when we're working with links
 - the useEffect component runs a set of actions in the CLientDetail function
+
+6/9
+- focused on learning how to create a sliding pane component in a separate file 
+- get different components to communicate with each other
+- input data int oa form and have it autopopulate on the page
+- gained understanding of form submission process 
+- Created interface to define rules that allows isPaneOpen to be used
+- typescript makes it so that whenever the form pane is called, error will be thrown if right pieces of data is not passed in (this is what we want during development)
+- we turned the pane into a dedicated component
