@@ -34,3 +34,5 @@
 - Created interface to define rules that allows isPaneOpen to be used
 - typescript makes it so that whenever the form pane is called, error will be thrown if right pieces of data is not passed in (this is what we want during development)
 - we turned the pane into a dedicated component
+- setContent actually adds data to the page in a dynamic way
+- learned how to work with forms

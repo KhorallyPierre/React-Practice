@@ -1,4 +1,4 @@
-import React, { useDebugValue } from 'react'
+import React, { useState } from 'react'
 import SlidingPane from "react-sliding-pane";
 import "react-sliding-pane/dist/react-sliding-pane.css";
 
@@ -9,17 +9,30 @@ interface IUpdateFormPaneProps {
     handleClose: () => void;
 }
 const UpdateFormPane = (props: IUpdateFormPaneProps) => {
-    const {isOpen, handleClose} = props
+    const {isOpen, handleClose} = props;
+    const [content, setContent] = useState("");
+    const handleSubmit = (evt: any) => {
+        evt.preventDefault();
+        alert(content)
+    }
     return (
         <SlidingPane
         className="some-custom-class"
         overlayClassName="some-custom-overlay-class"
         isOpen={isOpen}
-        title="Hey, it is optional pane title.  I can be React component too."
+        title={content ? content : "Placeholder"}
         subtitle="Optional subtitle."
         onRequestClose={handleClose} 
         
       >
+          <form onSubmit={handleSubmit}>
+              <input
+              value={content}
+              onChange={(evt) => setContent(evt.target.value)}
+              />
+          </form>
+          <button type="submit">Submit</button>
+
         <div>Slide in the DMs like this! ;)</div>
         <br />
        
