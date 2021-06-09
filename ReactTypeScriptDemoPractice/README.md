@@ -21,3 +21,7 @@
 - I created an array of objects, learned howv how to use map in react to iterate over large amounts of data
 - map returned jsx code (our divs)
 - used map on a nested collection
+- used state to set some local variables for component
+- the state is a varialble and react lets us change its value
+- jsx gives as an onClick prop when we're working with links
+- the useEffect component runs a set of actions in the CLientDetail function
