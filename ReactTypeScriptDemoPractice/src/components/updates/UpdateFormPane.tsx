@@ -21,7 +21,7 @@ const UpdateFormPane = (props: IUpdateFormPaneProps) => {
         overlayClassName="some-custom-overlay-class"
         isOpen={isOpen}
         title={content ? content : "Placeholder"}
-        subtitle="Optional subtitle."
+        subtitle="Optional subtitle." 
         onRequestClose={handleClose} 
         
       >
